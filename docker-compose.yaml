@@ -1,0 +1,19 @@
+version: '3'
+services: 
+    qc-brackend-scm:
+        image: "rodrigolimasd/qc-brackend-scm:alpha"
+        ports: 
+         - "3030:3030"
+    qc-brackend-user:
+        image: "rodrigolimasd/qc-brackend-user:alpha"
+        networks:
+         - "qc"
+        ports:
+         - "3020:3020"
+         
+    qc-frontend:
+        image: "rodrigolimasd/qc-frontend:alpha"
+        ports:
+         - "8887:80"
+networks:
+    qc:
