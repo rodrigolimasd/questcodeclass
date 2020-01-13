@@ -1,1 +1,6 @@
 # Resources
+
+Client ID
+434e7b9ae6be4d697de5
+Client Secret
+d8e0d34dc076e946a6eb99921a2ee4a0563fadbf
