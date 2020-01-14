@@ -10,7 +10,7 @@ class Education extends Component {
     this.props.deleteEducation(id, this.props.history);
   }
   render() {
-    const education = this.props.myData.map(edu => (
+    const education = this.props.myData ? this.props.myData.map(edu => (
       <tr key={edu._id}>
         <td>{edu.school}</td>
         <td>{edu.degree}</td>
@@ -32,7 +32,7 @@ class Education extends Component {
           </button>
         </td>
       </tr>
-    ));
+    )) : '';
     return (
       <div>
         <h4 className="mb-4">Histórico Acadêmico</h4>

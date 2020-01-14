@@ -10,7 +10,7 @@ class Experience extends Component {
     this.props.deleteExperience(id, this.props.history);
   }
   render() {
-    const experience = this.props.myData.map(exp => (
+    const experience = this.props.myData ? this.props.myData.map(exp => (
       <tr key={exp._id}>
         <td>{exp.company}</td>
         <td>{exp.title}</td>
@@ -31,7 +31,7 @@ class Experience extends Component {
           </button>
         </td>
       </tr>
-    ));
+    )) : '';
     return (
       <div>
         <h4 className="mb-4">Experiência Profissional</h4>
